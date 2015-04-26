@@ -6,17 +6,17 @@ The attached R script (run_analysis.R) performs the following to clean up the da
 
   *  Reads activity_labels.txt and applies descriptive activity names to name the activities in the data set:
 
-   	*  walking
+  	*  walking
 
-    	* walkingupstairs
+  	* walkingupstairs
 
-    	* walkingdownstairs
+  	* walkingdownstairs
 
-    	* sitting
+  	* sitting
 
-    	* standing
+  	* standing
 
-    	* laying
+  	* laying
 
   *  The script also appropriately labels the data set with descriptive names: all feature names (attributes) and activity names are converted to lower case, underscores and brackets () are removed. Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is saved as merged_clean_data.txt, a 10299x68 data frame such that the first column contains subject IDs, the second column activity names, and the last 66 columns are measurements.
 
@@ -27,4 +27,4 @@ The attached R script (run_analysis.R) performs the following to clean up the da
  * Unzip the source (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) into a folder on your local drive, say C:\Users\yourname\Documents\R\
  * Put run_analysis.R into C:\Users\yourname\Documents\R\UCI HAR Dataset\
  * In RStudio: setwd("C:\\Users\\yourname\\Documents\\R\\UCI HAR Dataset\\"), followed by: source("run_analysis.R")
- * Use data <- read.table("data_set_with_the_averages.txt") to read the data. It is 180x68 because there are 30 subjects and 6 activities, thus "for each activity and each subject" means 30 * 6 = 180 rows. Note that the provided R script has no assumptions on numbers of records, only on locations of files.
+ * Use data <- read.table("tidy_data_set.txt") to read the data. It is 180x68 because there are 30 subjects and 6 activities, thus "for each activity and each subject" means 30 * 6 = 180 rows. Note that the provided R script has no assumptions on numbers of records, only on locations of files.
